@@ -25,7 +25,6 @@ function App() {
     },
     [loading, hasMore]
   );
-  // Planets(pageNumber)
 
   const planetElementRef = useRef();
 

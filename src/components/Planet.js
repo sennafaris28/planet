@@ -11,10 +11,10 @@ export default function Planet(props) {
         <p>
           Rotation Period: {props.rotation} Orbital Period: {props.orbital}
         </p>
+        <p>Gravity Level: {props.gravity}</p>
+        <h3>Total Population: {props.population}</h3>
         <h4>Climate: {props.climate}</h4>
       </div>
     </div>
   );
-  //   <div>
-  //       {props.name}</div>;
 }

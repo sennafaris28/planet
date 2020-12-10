@@ -7,8 +7,6 @@ const Planets = (query, pageNumber) => {
   const [error, setError] = useState(false);
   const [hasMore, setHasMore] = useState(false);
 
-  // const [counter, setCounter] = useState(0)
-
   useEffect(() => {
     setPlanets([]);
   }, [query]);
@@ -37,15 +35,12 @@ const Planets = (query, pageNumber) => {
           setHasMore(
             document.querySelectorAll(".planet").length < result.data.count
           );
-          // setHasMore(true)
           setLoading(false);
         })
         .catch((error) => {
           console.log(error);
           if (Axios.isCancel(error)) return;
           setError(true);
-          //   setHasMore(false);
-          // setLoading(false)
         });
       return () => cancel();
     } else {
@@ -68,7 +63,6 @@ const Planets = (query, pageNumber) => {
           setHasMore(
             document.querySelectorAll(".planet").length < result.data.count
           );
-          // setHasMore(true)
           setLoading(false);
         })
         .catch((error) => {
